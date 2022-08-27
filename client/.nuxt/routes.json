@@ -1,0 +1,23 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "D:\\\\git\\\\mynuxtfrontend\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_0e1dafc8"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\git\\\\mynuxtfrontend\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_1105a4b8"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\git\\\\mynuxtfrontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2dd58a8d"
+  }
+]
