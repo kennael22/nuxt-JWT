@@ -17,6 +17,7 @@ import nuxt_plugin_plugin_c7c3dbda from 'nuxt_plugin_plugin_c7c3dbda' // Source:
 import nuxt_plugin_plugin_817bca7e from 'nuxt_plugin_plugin_817bca7e' // Source: .\\vuetify\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_ac2c6a94 from 'nuxt_plugin_axios_ac2c6a94' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_veevalidate_1a0c1998 from 'nuxt_plugin_veevalidate_1a0c1998' // Source: ..\\plugins\\vee-validate.js (mode: 'all')
+import nuxt_plugin_vuexpersist_25bdab30 from 'nuxt_plugin_vuexpersist_25bdab30' // Source: ..\\plugins\\vuex-persist.js (mode: 'all')
 import nuxt_plugin_auth_c44aa08c from 'nuxt_plugin_auth_c44aa08c' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -225,6 +226,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_veevalidate_1a0c1998 === 'function') {
     await nuxt_plugin_veevalidate_1a0c1998(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vuexpersist_25bdab30 === 'function') {
+    await nuxt_plugin_vuexpersist_25bdab30(app.context, inject)
   }
 
   if (typeof nuxt_plugin_auth_c44aa08c === 'function') {

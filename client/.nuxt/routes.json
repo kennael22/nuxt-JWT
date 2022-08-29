@@ -3,18 +3,21 @@
     "name": "about",
     "path": "/about",
     "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\client\\\\pages\\\\about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_b19d4c26"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\client\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_dede506e"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\client\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_722d969c"
   }
 ]

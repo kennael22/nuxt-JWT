@@ -5,7 +5,8 @@ export const getters = {
 }
 
 export const state = {
-    user:{}
+    user:{},
+    test:{}
 }
 
 export const mutations = {
