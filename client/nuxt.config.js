@@ -42,11 +42,11 @@ export default {
     strategies: {
       'laravelJWT': {
         provider: 'laravel/jwt',
-        url: 'http://127.0.0.1:8000/api/auth',
+        url: 'http://127.0.0.1:8000/api',
         endpoints: {
           login: { url: '/login', method: 'post', propertyName: 'access_token' },
-          user: { url: '/user', method: 'get', propertyName: 'data.attributes' },
-          logout: { url: '/logout', method: 'post' },
+          user: { url: '/auth/user', method: 'get', propertyName: 'data.attributes' },
+          logout: { url: '/auth/logout', method: 'post' },
         },
         token: {
           property: 'access_token',

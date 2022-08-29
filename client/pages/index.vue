@@ -75,7 +75,7 @@ export default {
     // ...mapGetters(['isAuthenticated','auth'])
     async getUsers(){
         // this.users = await this.$axios.get('http://127.0.0.1:8000/api/auth/users')
-        return await this.$axios.get('http://127.0.0.1:8000/api/auth/users')
+        return await this.$axios.get('http://127.0.0.1:8000/api/auth/user')
         .then((response) => {
             console.log('1',response.data);
             console.log('2',response.status);
@@ -104,10 +104,11 @@ export default {
     //   this.isAuthenticated == true ? this.$router.push({path: '/'}):this.$router.push({path: '/login'})
     // console.log('user',this.loggedInUser)
     // console.log(this.getUsers)
-    this.$axios.get('http://127.0.0.1:8000/api/auth/test?token=asdasdasd')
-    .then(r => {
-        console.log(r.data)
-    })
+    // this.$axios.get('http://127.0.0.1:8000/api/auth/test?token=asdasdasd')
+    // .then(r => {
+    //     console.log(r.data)
+    // })
+    console.log(this.getUsers)
   }
 }
 </script>
