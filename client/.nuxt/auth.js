@@ -2,7 +2,7 @@ import Middleware from './middleware'
 import { Auth, authMiddleware, ExpiredAuthSessionError } from '~auth/runtime'
 
 // Active schemes
-import { LaravelJWTScheme } from '~auth/runtime'
+import { RefreshScheme } from '~auth/runtime'
 
 Middleware.auth = authMiddleware
 
@@ -41,7 +41,20 @@ export default function (ctx, inject) {
 
   // Register strategies
   // laravelJWT
-  $auth.registerStrategy('laravelJWT', new LaravelJWTScheme($auth, {
+  $auth.registerStrategy('laravelJWT', new RefreshScheme($auth, {
+  "token": {
+    "property": "access_token",
+    "maxAge": 1800,
+    "global": true,
+    "type": "Bearer"
+  },
+  "refreshToken": {
+    "property": "access_token",
+    "data": "access_token",
+    "maxAge": 2592000,
+    "required": false,
+    "tokenRequired": true
+  },
   "url": "http://127.0.0.1:8000/api",
   "endpoints": {
     "login": {
@@ -50,7 +63,8 @@ export default function (ctx, inject) {
       "propertyName": "access_token"
     },
     "refresh": {
-      "url": "http://127.0.0.1:8000/api/api/auth/refresh"
+      "url": "http://127.0.0.1:8000/api/auth/refresh",
+      "method": "post"
     },
     "logout": {
       "url": "http://127.0.0.1:8000/api/auth/logout",
@@ -61,17 +75,6 @@ export default function (ctx, inject) {
       "method": "get",
       "propertyName": "data.attributes"
     }
-  },
-  "token": {
-    "property": "access_token",
-    "maxAge": 3600
-  },
-  "refreshToken": {
-    "property": false,
-    "data": false,
-    "maxAge": 1209600,
-    "required": false,
-    "tokenRequired": true
   },
   "name": "laravelJWT",
   "user": {

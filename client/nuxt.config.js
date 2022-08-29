@@ -41,20 +41,33 @@ export default {
   auth: {
     strategies: {
       'laravelJWT': {
+        scheme: 'refresh',
+        token: {
+          property: 'access_token',
+          maxAge: 1800,
+          global: true,
+          type: 'Bearer'
+        },
+        refreshToken: {
+          property: 'access_token',
+          data: 'access_token',
+          maxAge: 60 * 60 * 24 * 30
+        },
         provider: 'laravel/jwt',
         url: 'http://127.0.0.1:8000/api',
         endpoints: {
           login: { url: '/login', method: 'post', propertyName: 'access_token' },
           user: { url: '/auth/user', method: 'get', propertyName: 'data.attributes' },
           logout: { url: '/auth/logout', method: 'post' },
+          refresh: { url: '/auth/refresh', method: 'post' },
         },
-        token: {
-          property: 'access_token',
-          maxAge: 60 * 60
-        },
-        refreshToken: {
-          maxAge: 20160 * 60
-        },
+        // token: {
+        //   property: 'access_token',
+        //   maxAge: 60 * 60
+        // },
+        // refreshToken: {
+        //   maxAge: 20160 * 60
+        // },
       },
     }
   }

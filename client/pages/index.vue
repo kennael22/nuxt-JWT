@@ -17,6 +17,8 @@
                 </div>
                 <div>
                     <v-btn @click="logout">logout</v-btn>
+                    <v-btn @click="fetchUsers">fetch users</v-btn>
+                    <v-btn @click="refreshToken">refresh token</v-btn>
                 </div>
                 </div>
                 <v-list shaped dense>
@@ -59,7 +61,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
     layout: 'default',
@@ -86,11 +88,24 @@ export default {
       }
   },
   methods:{
-      async logout(){
-          await this.$auth.logout()
-          console.log('auth ',this.$auth)
-          this.$router.push({path:'/login'})
-      },
+    ...mapActions(['getUser']),
+    async logout(){
+        await this.$auth.logout()
+        console.log('auth ',this.$auth)
+        this.$router.push({path:'/login'})
+    },
+    async fetchUsers() {
+        let response = await this.$axios.get('http://127.0.0.1:8000/api/auth/users')
+        console.log(response.data)
+    },
+    async refreshToken() {
+        // let response = await this.$axios.put('http://127.0.0.1:8000/api/auth/refresh')
+        // await this.getUser(response)
+        // console.log(response.data)
+        await this.$auth.refreshTokens()
+        console.log(this.$auth.strategy.refreshToken.status())
+        console.log(this.$auth.strategy.refreshToken.status().expired())
+    }
       
   },
   beforeCreate(){

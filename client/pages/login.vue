@@ -81,7 +81,6 @@ export default {
 		password: ''
 	},
 	}),
-
     methods: {
       	...mapActions(['getUser']),
 		async submit () {
@@ -90,6 +89,7 @@ export default {
 					let response = await this.$auth.loginWith('laravelJWT', {
 						data: this.form
 				})
+				// let response = await this.$axios.post('127.0.0.1:8000/api/auth/login', this.form)
 				await this.getUser(response)
 				this.$router.push({path:'/'})
 				} catch (e) {
@@ -103,5 +103,10 @@ export default {
 			this.$refs.observer.reset()
 		},
     },
+	created() {
+		if (process.client) {
+			console.log('test')
+		}
+	},
 }
 </script>

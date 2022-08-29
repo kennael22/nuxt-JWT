@@ -5,3 +5,4 @@
 /server/vendor
 /server/package-lock.json
 /server/composer.lock
+/server2/vendor
