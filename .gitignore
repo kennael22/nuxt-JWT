@@ -1,3 +1,7 @@
 /client/node_modules
 /client/vendor
+/client/package-lock.json
+/client/composer-lock.json
 /server/vendor
+/server/package-lock.json
+/server/composer-lock.json
