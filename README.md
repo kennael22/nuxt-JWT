@@ -1,1 +1,1 @@
-# nuxtSampleProjectJWT
+# nuxt + laravel + JWT
