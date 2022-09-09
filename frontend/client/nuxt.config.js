@@ -1,6 +1,7 @@
 // nuxt.config.js
 export default {
   ssr: false,
+  // target: 'static',
     // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -8,7 +9,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vee-validate.js',
-    '~/plugins/vuex-persist.js'
+    '~/plugins/vuex-persist.js',
+    // '~/plugins/vuetify.js'
     // '~plugins/mixins/user.js'
     
   ],

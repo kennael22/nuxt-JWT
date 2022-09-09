@@ -1,8 +1,8 @@
-/client/node_modules
-/client/vendor
-/client/package-lock.json
-/client/composer.lock
-/server/vendor
-/server/package-lock.json
-/server/composer.lock
-/server2/vendor
+/frontend/client/node_modules
+/frontend/client/vendor
+/frontend/client/package-lock.json
+/frontend/client/composer.lock
+/backend/server/vendor
+/backend/server/package-lock.json
+/backend/server/composer.lock
+/backend/server2/vendor

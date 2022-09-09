@@ -1,0 +1,23 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\frontend\\\\client\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_734ef3bf"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\frontend\\\\client\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_5cae719b"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\frontend\\\\client\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_d9f262f8"
+  }
+]
