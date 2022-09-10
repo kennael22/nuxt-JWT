@@ -2,8 +2,8 @@
 /frontend/client/vendor
 /frontend/client/package-lock.json
 /frontend/client/composer.lock
-/backend/server/vendor
-/backend/server/package-lock.json
-/backend/server/composer.lock
 /backend/vendor
 /backend/composer.lock
+/dump/initdb
+/server2
+/server
