@@ -4,6 +4,6 @@
 /frontend/client/composer.lock
 /backend/vendor
 /backend/composer.lock
-/dump/initdb
-/server2
-/server
+/dump
+/lumen
+/laravel
