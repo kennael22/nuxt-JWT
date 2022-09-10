@@ -56,7 +56,7 @@ export default {
           maxAge: 60 * 60 * 24 * 30
         },
         provider: 'laravel/jwt',
-        url: 'http://127.0.0.1:8000/api',
+        url: 'http://localhost:8000/api',
         endpoints: {
           login: { url: '/login', method: 'post', propertyName: 'access_token' },
           user: { url: '/auth/user', method: 'get', propertyName: 'data.attributes' },

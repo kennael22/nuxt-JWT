@@ -5,4 +5,5 @@
 /backend/server/vendor
 /backend/server/package-lock.json
 /backend/server/composer.lock
-/backend/server2/vendor
+/backend/vendor
+/backend/composer.lock

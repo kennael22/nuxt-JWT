@@ -2,22 +2,22 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\frontend\\\\client\\\\pages\\\\about.vue",
+    "component": "/usr/src/app/pages/about.vue",
     "chunkName": "pages/about",
-    "_name": "_734ef3bf"
+    "_name": "_6da6a86d"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\frontend\\\\client\\\\pages\\\\login.vue",
+    "component": "/usr/src/app/pages/login.vue",
     "chunkName": "pages/login",
-    "_name": "_5cae719b"
+    "_name": "_57062649"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\git\\\\nuxtSampleProjectJWT\\\\frontend\\\\client\\\\pages\\\\index.vue",
+    "component": "/usr/src/app/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_d9f262f8"
+    "_name": "_e542f99c"
   }
 ]

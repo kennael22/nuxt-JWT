@@ -55,23 +55,23 @@ export default function (ctx, inject) {
     "required": false,
     "tokenRequired": true
   },
-  "url": "http://127.0.0.1:8000/api",
+  "url": "http://localhost:8000/api",
   "endpoints": {
     "login": {
-      "url": "http://127.0.0.1:8000/api/login",
+      "url": "http://localhost:8000/api/login",
       "method": "post",
       "propertyName": "access_token"
     },
     "refresh": {
-      "url": "http://127.0.0.1:8000/api/auth/refresh",
+      "url": "http://localhost:8000/api/auth/refresh",
       "method": "post"
     },
     "logout": {
-      "url": "http://127.0.0.1:8000/api/auth/logout",
+      "url": "http://localhost:8000/api/auth/logout",
       "method": "post"
     },
     "user": {
-      "url": "http://127.0.0.1:8000/api/auth/user",
+      "url": "http://localhost:8000/api/auth/user",
       "method": "get",
       "propertyName": "data.attributes"
     }
