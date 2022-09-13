@@ -39,6 +39,11 @@ export default {
     // baseURL:'http://127.0.0.1:8000/api/auth',
     credentials: true
   },
+  // to serve localhost
+  // server: {
+  //   port: 3000, // default: 3000,
+  //   host: '{ip address}'
+  // },
 
   auth: {
     strategies: {
@@ -56,6 +61,7 @@ export default {
           maxAge: 60 * 60 * 24 * 30
         },
         provider: 'laravel/jwt',
+        //url: 'http://{ip address of host}:8000/api', 
         url: 'http://localhost:8000/api',
         endpoints: {
           login: { url: '/login', method: 'post', propertyName: 'access_token' },

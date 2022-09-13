@@ -5,7 +5,7 @@ services:
     tty: true
     volumes:
         - ./backend:/var/www/laravel
-       # - /var/www/laravel/vendor/
+        - /var/www/laravel/vendor/
     ports:
       - '8000:8000'
     env_file:
@@ -13,8 +13,11 @@ services:
     depends_on:
       - mysql
   mysql:
-    image: mysql/mysql-server:5.7
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    #image: mysql/mysql-server:5.7
+    build:
+      context: ./mysql/
+      dockerfile: Dockerfile
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --explicit_defaults_for_timestamp
     ports:
       - '3306:3306'
     environment:
@@ -54,7 +57,7 @@ services:
       - backend
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-    # network_mode: bridge
+    network_mode: bridge
   # redis:
   #   image: redis:latest
   #   ports:
