@@ -11,7 +11,8 @@ services:
     env_file:
       - ./backend/.env
     depends_on:
-      - mysql
+      mysql:
+          condition: service_healthy
   mysql:
     #image: mysql/mysql-server:5.7
     build:
@@ -53,8 +54,6 @@ services:
       - 80:80
     tty: true
     restart: always
-    depends_on:
-      - backend
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     network_mode: bridge
